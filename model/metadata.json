@@ -1,0 +1,2173 @@
+{
+  "brands": [
+    "Ambassador",
+    "Ashok",
+    "Audi",
+    "BMW",
+    "Chevrolet",
+    "Daewoo",
+    "Datsun",
+    "Fiat",
+    "Force",
+    "Ford",
+    "Honda",
+    "Hyundai",
+    "Isuzu",
+    "Jaguar",
+    "Jeep",
+    "Kia",
+    "Land",
+    "Lexus",
+    "MG",
+    "Mahindra",
+    "Maruti",
+    "Mercedes-Benz",
+    "Mitsubishi",
+    "Nissan",
+    "Opel",
+    "Renault",
+    "Skoda",
+    "Tata",
+    "Toyota",
+    "Volkswagen",
+    "Volvo"
+  ],
+  "brand_to_code": {
+    "Ambassador": 1,
+    "Ashok": 2,
+    "Audi": 3,
+    "BMW": 4,
+    "Chevrolet": 5,
+    "Daewoo": 6,
+    "Datsun": 7,
+    "Fiat": 8,
+    "Force": 9,
+    "Ford": 10,
+    "Honda": 11,
+    "Hyundai": 12,
+    "Isuzu": 13,
+    "Jaguar": 14,
+    "Jeep": 15,
+    "Kia": 16,
+    "Land": 17,
+    "Lexus": 18,
+    "MG": 19,
+    "Mahindra": 20,
+    "Maruti": 21,
+    "Mercedes-Benz": 22,
+    "Mitsubishi": 23,
+    "Nissan": 24,
+    "Opel": 25,
+    "Renault": 26,
+    "Skoda": 27,
+    "Tata": 28,
+    "Toyota": 29,
+    "Volkswagen": 30,
+    "Volvo": 31
+  },
+  "fuel_map": {
+    "Diesel": 0,
+    "Petrol": 1,
+    "LPG": 2,
+    "CNG": 3
+  },
+  "seller_map": {
+    "Individual": 0,
+    "Dealer": 1,
+    "Trustmark Dealer": 2
+  },
+  "transmission_map": {
+    "Manual": 0,
+    "Automatic": 1
+  },
+  "owner_map": {
+    "First Owner": 0,
+    "Second Owner": 1,
+    "Third Owner": 2,
+    "Fourth & Above Owner": 3,
+    "Test Drive Car": 4
+  },
+  "feature_order": [
+    "name",
+    "year",
+    "km_driven",
+    "fuel",
+    "seller_type",
+    "transmission",
+    "owner",
+    "mileage",
+    "engine",
+    "max_power",
+    "seats"
+  ],
+  "year_min": 1994,
+  "year_max": 2020,
+  "r2_score": 0.6642,
+  "mae": 165388.5,
+  "models_by_brand": {
+    "Ambassador": [
+      "Ambassador CLASSIC",
+      "Ambassador Classic",
+      "Ambassador Grand"
+    ],
+    "Ashok": [
+      "Ashok Leyland"
+    ],
+    "Audi": [
+      "Audi A3",
+      "Audi A4",
+      "Audi A6",
+      "Audi Q3",
+      "Audi Q5",
+      "Audi Q7"
+    ],
+    "BMW": [
+      "BMW 3",
+      "BMW 5",
+      "BMW 6",
+      "BMW 7",
+      "BMW X1",
+      "BMW X3",
+      "BMW X4",
+      "BMW X5",
+      "BMW X6",
+      "BMW X7"
+    ],
+    "Chevrolet": [
+      "Chevrolet Aveo",
+      "Chevrolet Beat",
+      "Chevrolet Captiva",
+      "Chevrolet Cruze",
+      "Chevrolet Enjoy",
+      "Chevrolet Optra",
+      "Chevrolet Sail",
+      "Chevrolet Spark",
+      "Chevrolet Tavera",
+      "Chevrolet Trailblazer"
+    ],
+    "Daewoo": [
+      "Daewoo Matiz"
+    ],
+    "Datsun": [
+      "Datsun GO",
+      "Datsun RediGO"
+    ],
+    "Fiat": [
+      "Fiat Avventura",
+      "Fiat Grande",
+      "Fiat Linea",
+      "Fiat Punto"
+    ],
+    "Force": [
+      "Force Gurkha",
+      "Force One"
+    ],
+    "Ford": [
+      "Ford Aspire",
+      "Ford Classic",
+      "Ford EcoSport",
+      "Ford Ecosport",
+      "Ford Endeavour",
+      "Ford Fiesta",
+      "Ford Figo",
+      "Ford Freestyle",
+      "Ford Fusion",
+      "Ford Ikon"
+    ],
+    "Honda": [
+      "Honda Accord",
+      "Honda Amaze",
+      "Honda BR-V",
+      "Honda BRV",
+      "Honda Brio",
+      "Honda CR-V",
+      "Honda City",
+      "Honda Civic",
+      "Honda Jazz",
+      "Honda Mobilio",
+      "Honda WR-V"
+    ],
+    "Hyundai": [
+      "Hyundai Accent",
+      "Hyundai Creta",
+      "Hyundai EON",
+      "Hyundai Elantra",
+      "Hyundai Elite",
+      "Hyundai Getz",
+      "Hyundai Grand",
+      "Hyundai Santa",
+      "Hyundai Santro",
+      "Hyundai Sonata",
+      "Hyundai Tucson",
+      "Hyundai Venue",
+      "Hyundai Verna",
+      "Hyundai Xcent",
+      "Hyundai i10",
+      "Hyundai i20"
+    ],
+    "Isuzu": [
+      "Isuzu D-Max",
+      "Isuzu MU",
+      "Isuzu MUX"
+    ],
+    "Jaguar": [
+      "Jaguar XE",
+      "Jaguar XF"
+    ],
+    "Jeep": [
+      "Jeep Compass",
+      "Jeep Wrangler"
+    ],
+    "Kia": [
+      "Kia Seltos"
+    ],
+    "Land": [
+      "Land Rover"
+    ],
+    "Lexus": [
+      "Lexus ES"
+    ],
+    "MG": [
+      "MG Hector"
+    ],
+    "Mahindra": [
+      "Mahindra Bolero",
+      "Mahindra KUV",
+      "Mahindra Logan",
+      "Mahindra Marazzo",
+      "Mahindra NuvoSport",
+      "Mahindra Quanto",
+      "Mahindra Renault",
+      "Mahindra Scorpio",
+      "Mahindra Ssangyong",
+      "Mahindra Supro",
+      "Mahindra TUV",
+      "Mahindra Thar",
+      "Mahindra Verito",
+      "Mahindra XUV300",
+      "Mahindra XUV500",
+      "Mahindra Xylo"
+    ],
+    "Maruti": [
+      "Maruti 800",
+      "Maruti A-Star",
+      "Maruti Alto",
+      "Maruti Baleno",
+      "Maruti Celerio",
+      "Maruti Ciaz",
+      "Maruti Dzire",
+      "Maruti Eeco",
+      "Maruti Ertiga",
+      "Maruti Esteem",
+      "Maruti Gypsy",
+      "Maruti Ignis",
+      "Maruti Omni",
+      "Maruti Ritz",
+      "Maruti S-Cross",
+      "Maruti S-Presso",
+      "Maruti SX4",
+      "Maruti Swift",
+      "Maruti Vitara",
+      "Maruti Wagon",
+      "Maruti XL6",
+      "Maruti Zen"
+    ],
+    "Mercedes-Benz": [
+      "Mercedes-Benz B",
+      "Mercedes-Benz CLA",
+      "Mercedes-Benz E-Class",
+      "Mercedes-Benz GL-Class",
+      "Mercedes-Benz GLA",
+      "Mercedes-Benz GLC",
+      "Mercedes-Benz M-Class",
+      "Mercedes-Benz New",
+      "Mercedes-Benz S-Class"
+    ],
+    "Mitsubishi": [
+      "Mitsubishi Lancer",
+      "Mitsubishi Pajero"
+    ],
+    "Nissan": [
+      "Nissan Kicks",
+      "Nissan Micra",
+      "Nissan Sunny",
+      "Nissan Teana",
+      "Nissan Terrano"
+    ],
+    "Opel": [
+      "Opel Astra"
+    ],
+    "Renault": [
+      "Renault Captur",
+      "Renault Duster",
+      "Renault Fluence",
+      "Renault KWID",
+      "Renault Koleos",
+      "Renault Lodgy",
+      "Renault Pulse",
+      "Renault Scala",
+      "Renault Triber"
+    ],
+    "Skoda": [
+      "Skoda Fabia",
+      "Skoda Kodiaq",
+      "Skoda Laura",
+      "Skoda Octavia",
+      "Skoda Rapid",
+      "Skoda Superb",
+      "Skoda Yeti"
+    ],
+    "Tata": [
+      "Tata Aria",
+      "Tata Bolt",
+      "Tata Harrier",
+      "Tata Hexa",
+      "Tata Indica",
+      "Tata Indigo",
+      "Tata Manza",
+      "Tata Nano",
+      "Tata New",
+      "Tata Nexon",
+      "Tata Safari",
+      "Tata Spacio",
+      "Tata Sumo",
+      "Tata Tiago",
+      "Tata Tigor",
+      "Tata Venture",
+      "Tata Winger",
+      "Tata Xenon",
+      "Tata Zest"
+    ],
+    "Toyota": [
+      "Toyota Camry",
+      "Toyota Corolla",
+      "Toyota Etios",
+      "Toyota Fortuner",
+      "Toyota Glanza",
+      "Toyota Innova",
+      "Toyota Land",
+      "Toyota Platinum",
+      "Toyota Qualis",
+      "Toyota Yaris"
+    ],
+    "Volkswagen": [
+      "Volkswagen Ameo",
+      "Volkswagen CrossPolo",
+      "Volkswagen GTI",
+      "Volkswagen Jetta",
+      "Volkswagen Passat",
+      "Volkswagen Polo",
+      "Volkswagen Vento"
+    ],
+    "Volvo": [
+      "Volvo S60",
+      "Volvo S90",
+      "Volvo V40",
+      "Volvo XC40",
+      "Volvo XC60",
+      "Volvo XC90"
+    ]
+  },
+  "model_defaults": {
+    "Ambassador CLASSIC": {
+      "year": 2000,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 12.8,
+      "engine": 1489.0,
+      "max_power": 35.5,
+      "seats": 5
+    },
+    "Ambassador Classic": {
+      "year": 1994,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 12.8,
+      "engine": 1995.0,
+      "max_power": 52.0,
+      "seats": 5
+    },
+    "Ambassador Grand": {
+      "year": 2008,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.15,
+      "engine": 1995.0,
+      "max_power": 52.0,
+      "seats": 5
+    },
+    "Ashok Leyland": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.07,
+      "engine": 1461.0,
+      "max_power": 75.0,
+      "seats": 8
+    },
+    "Audi A3": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 20.38,
+      "engine": 1968.0,
+      "max_power": 143.0,
+      "seats": 5
+    },
+    "Audi A4": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.68,
+      "engine": 1968.0,
+      "max_power": 181.0,
+      "seats": 5
+    },
+    "Audi A6": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.68,
+      "engine": 1968.0,
+      "max_power": 187.7,
+      "seats": 5
+    },
+    "Audi Q3": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 15.73,
+      "engine": 1968.0,
+      "max_power": 174.3,
+      "seats": 5
+    },
+    "Audi Q5": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.22,
+      "engine": 2468.0,
+      "max_power": 214.7,
+      "seats": 5
+    },
+    "Audi Q7": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.07,
+      "engine": 2967.0,
+      "max_power": 241.4,
+      "seats": 7
+    },
+    "BMW 3": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 18.88,
+      "engine": 1995.0,
+      "max_power": 184.0,
+      "seats": 5
+    },
+    "BMW 5": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 18.12,
+      "engine": 1995.0,
+      "max_power": 187.7,
+      "seats": 5
+    },
+    "BMW 6": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.09,
+      "engine": 2993.0,
+      "max_power": 261.4,
+      "seats": 4
+    },
+    "BMW 7": {
+      "year": 2008,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 14.49,
+      "engine": 2993.0,
+      "max_power": 258.0,
+      "seats": 5
+    },
+    "BMW X1": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 18.34,
+      "engine": 1998.0,
+      "max_power": 189.5,
+      "seats": 5
+    },
+    "BMW X3": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 16.09,
+      "engine": 1995.0,
+      "max_power": 184.0,
+      "seats": 5
+    },
+    "BMW X4": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 16.78,
+      "engine": 1995.0,
+      "max_power": 190.0,
+      "seats": 5
+    },
+    "BMW X5": {
+      "year": 2008,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.0,
+      "engine": 2993.0,
+      "max_power": 235.0,
+      "seats": 5
+    },
+    "BMW X6": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.2,
+      "engine": 2993.0,
+      "max_power": 241.0,
+      "seats": 4
+    },
+    "BMW X7": {
+      "year": 2020,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.38,
+      "engine": 2993.0,
+      "max_power": 265.0,
+      "seats": 7
+    },
+    "Chevrolet Aveo": {
+      "year": 2008,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 14.98,
+      "engine": 1150.0,
+      "max_power": 75.5,
+      "seats": 5
+    },
+    "Chevrolet Beat": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 25.44,
+      "engine": 936.0,
+      "max_power": 57.6,
+      "seats": 5
+    },
+    "Chevrolet Captiva": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 11.5,
+      "engine": 1991.0,
+      "max_power": 147.9,
+      "seats": 7
+    },
+    "Chevrolet Cruze": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 18.3,
+      "engine": 1991.0,
+      "max_power": 147.9,
+      "seats": 5
+    },
+    "Chevrolet Enjoy": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 18.2,
+      "engine": 1248.0,
+      "max_power": 73.8,
+      "seats": 7
+    },
+    "Chevrolet Optra": {
+      "year": 2010,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 16.52,
+      "engine": 1991.0,
+      "max_power": 123.7,
+      "seats": 5
+    },
+    "Chevrolet Sail": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.2,
+      "engine": 1199.0,
+      "max_power": 82.4,
+      "seats": 5
+    },
+    "Chevrolet Spark": {
+      "year": 2010,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.0,
+      "engine": 995.0,
+      "max_power": 62.0,
+      "seats": 5
+    },
+    "Chevrolet Tavera": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.58,
+      "engine": 2499.0,
+      "max_power": 72.4,
+      "seats": 9
+    },
+    "Chevrolet Trailblazer": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.45,
+      "engine": 2776.0,
+      "max_power": 197.2,
+      "seats": 7
+    },
+    "Daewoo Matiz": {
+      "year": 2000,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.5,
+      "engine": 796.0,
+      "max_power": 53.0,
+      "seats": 5
+    },
+    "Datsun GO": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.62,
+      "engine": 1198.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Datsun RediGO": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 22.7,
+      "engine": 999.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Fiat Avventura": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.5,
+      "engine": 1248.0,
+      "max_power": 91.7,
+      "seats": 5
+    },
+    "Fiat Grande": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.3,
+      "engine": 1248.0,
+      "max_power": 75.0,
+      "seats": 5
+    },
+    "Fiat Linea": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.4,
+      "engine": 1248.0,
+      "max_power": 91.7,
+      "seats": 5
+    },
+    "Fiat Punto": {
+      "year": 2012,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 15.7,
+      "engine": 1172.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Force Gurkha": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.0,
+      "engine": 2596.0,
+      "max_power": 80.8,
+      "seats": 5
+    },
+    "Force One": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.0,
+      "engine": 2200.0,
+      "max_power": 139.0,
+      "seats": 7
+    },
+    "Ford Aspire": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.4,
+      "engine": 1194.0,
+      "max_power": 94.9,
+      "seats": 5
+    },
+    "Ford Classic": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 16.88,
+      "engine": 1498.0,
+      "max_power": 83.3,
+      "seats": 5
+    },
+    "Ford EcoSport": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 22.77,
+      "engine": 1498.0,
+      "max_power": 99.0,
+      "seats": 5
+    },
+    "Ford Ecosport": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.7,
+      "engine": 1498.0,
+      "max_power": 99.0,
+      "seats": 5
+    },
+    "Ford Endeavour": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.62,
+      "engine": 2499.0,
+      "max_power": 153.9,
+      "seats": 7
+    },
+    "Ford Fiesta": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.8,
+      "engine": 1399.0,
+      "max_power": 68.0,
+      "seats": 5
+    },
+    "Ford Figo": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.0,
+      "engine": 1399.0,
+      "max_power": 70.0,
+      "seats": 5
+    },
+    "Ford Freestyle": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 23.8,
+      "engine": 1498.0,
+      "max_power": 98.6,
+      "seats": 5
+    },
+    "Ford Fusion": {
+      "year": 2009,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.7,
+      "engine": 1399.0,
+      "max_power": 68.0,
+      "seats": 5
+    },
+    "Ford Ikon": {
+      "year": 2005,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 13.8,
+      "engine": 1399.0,
+      "max_power": 70.0,
+      "seats": 5
+    },
+    "Honda Accord": {
+      "year": 2009,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 11.7,
+      "engine": 2354.0,
+      "max_power": 177.6,
+      "seats": 5
+    },
+    "Honda Amaze": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 25.8,
+      "engine": 1498.0,
+      "max_power": 98.6,
+      "seats": 5
+    },
+    "Honda BR-V": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 15.4,
+      "engine": 1497.0,
+      "max_power": 117.3,
+      "seats": 7
+    },
+    "Honda BRV": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.9,
+      "engine": 1498.0,
+      "max_power": 98.6,
+      "seats": 7
+    },
+    "Honda Brio": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 19.4,
+      "engine": 1198.0,
+      "max_power": 86.8,
+      "seats": 5
+    },
+    "Honda CR-V": {
+      "year": 2009,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 11.1,
+      "engine": 2354.0,
+      "max_power": 158.8,
+      "seats": 5
+    },
+    "Honda City": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 17.7,
+      "engine": 1497.0,
+      "max_power": 100.0,
+      "seats": 5
+    },
+    "Honda Civic": {
+      "year": 2008,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 13.5,
+      "engine": 1799.0,
+      "max_power": 130.0,
+      "seats": 5
+    },
+    "Honda Jazz": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.7,
+      "engine": 1199.0,
+      "max_power": 88.7,
+      "seats": 5
+    },
+    "Honda Mobilio": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 24.2,
+      "engine": 1498.0,
+      "max_power": 98.6,
+      "seats": 7
+    },
+    "Honda WR-V": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 25.5,
+      "engine": 1498.0,
+      "max_power": 98.6,
+      "seats": 5
+    },
+    "Hyundai Accent": {
+      "year": 2006,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 13.2,
+      "engine": 1495.0,
+      "max_power": 94.0,
+      "seats": 5
+    },
+    "Hyundai Creta": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.67,
+      "engine": 1582.0,
+      "max_power": 126.2,
+      "seats": 5
+    },
+    "Hyundai EON": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 21.1,
+      "engine": 814.0,
+      "max_power": 55.2,
+      "seats": 5
+    },
+    "Hyundai Elantra": {
+      "year": 2013,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 16.3,
+      "engine": 1795.0,
+      "max_power": 127.0,
+      "seats": 5
+    },
+    "Hyundai Elite": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.6,
+      "engine": 1197.0,
+      "max_power": 81.9,
+      "seats": 5
+    },
+    "Hyundai Getz": {
+      "year": 2006,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 15.3,
+      "engine": 1341.0,
+      "max_power": 83.0,
+      "seats": 5
+    },
+    "Hyundai Grand": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.9,
+      "engine": 1197.0,
+      "max_power": 81.9,
+      "seats": 5
+    },
+    "Hyundai Santa": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.01,
+      "engine": 2199.0,
+      "max_power": 194.3,
+      "seats": 7
+    },
+    "Hyundai Santro": {
+      "year": 2011,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 17.92,
+      "engine": 1086.0,
+      "max_power": 62.1,
+      "seats": 5
+    },
+    "Hyundai Sonata": {
+      "year": 2011,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 13.44,
+      "engine": 2359.0,
+      "max_power": 181.6,
+      "seats": 5
+    },
+    "Hyundai Tucson": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 14.49,
+      "engine": 1993.0,
+      "max_power": 147.5,
+      "seats": 6
+    },
+    "Hyundai Venue": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 18.15,
+      "engine": 998.0,
+      "max_power": 118.3,
+      "seats": 5
+    },
+    "Hyundai Verna": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 22.32,
+      "engine": 1582.0,
+      "max_power": 126.2,
+      "seats": 5
+    },
+    "Hyundai Xcent": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 24.4,
+      "engine": 1186.0,
+      "max_power": 74.0,
+      "seats": 5
+    },
+    "Hyundai i10": {
+      "year": 2011,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.36,
+      "engine": 1197.0,
+      "max_power": 78.9,
+      "seats": 5
+    },
+    "Hyundai i20": {
+      "year": 2015,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.6,
+      "engine": 1197.0,
+      "max_power": 82.8,
+      "seats": 5
+    },
+    "Isuzu D-Max": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.4,
+      "engine": 2249.0,
+      "max_power": 140.9,
+      "seats": 5
+    },
+    "Isuzu MU": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.08,
+      "engine": 2999.0,
+      "max_power": 161.0,
+      "seats": 7
+    },
+    "Isuzu MUX": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.8,
+      "engine": 2999.0,
+      "max_power": 174.6,
+      "seats": 7
+    },
+    "Jaguar XE": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.6,
+      "engine": 1999.0,
+      "max_power": 177.0,
+      "seats": 5
+    },
+    "Jaguar XF": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 15.55,
+      "engine": 2586.0,
+      "max_power": 229.3,
+      "seats": 5
+    },
+    "Jeep Compass": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.1,
+      "engine": 1956.0,
+      "max_power": 170.0,
+      "seats": 5
+    },
+    "Jeep Wrangler": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 9.5,
+      "engine": 3604.0,
+      "max_power": 280.0,
+      "seats": 5
+    },
+    "Kia Seltos": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.8,
+      "engine": 1493.0,
+      "max_power": 113.4,
+      "seats": 5
+    },
+    "Land Rover": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.7,
+      "engine": 2179.0,
+      "max_power": 148.3,
+      "seats": 5
+    },
+    "Lexus ES": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 22.37,
+      "engine": 2487.0,
+      "max_power": 214.6,
+      "seats": 5
+    },
+    "MG Hector": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 13.96,
+      "engine": 1451.0,
+      "max_power": 141.0,
+      "seats": 5
+    },
+    "Mahindra Bolero": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 15.96,
+      "engine": 2523.0,
+      "max_power": 63.0,
+      "seats": 7
+    },
+    "Mahindra KUV": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.73,
+      "engine": 1198.0,
+      "max_power": 79.5,
+      "seats": 6
+    },
+    "Mahindra Logan": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.2,
+      "engine": 1461.0,
+      "max_power": 65.0,
+      "seats": 5
+    },
+    "Mahindra Marazzo": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.3,
+      "engine": 1497.0,
+      "max_power": 121.0,
+      "seats": 7
+    },
+    "Mahindra NuvoSport": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.45,
+      "engine": 1493.0,
+      "max_power": 100.0,
+      "seats": 7
+    },
+    "Mahindra Quanto": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.21,
+      "engine": 1493.0,
+      "max_power": 100.0,
+      "seats": 7
+    },
+    "Mahindra Renault": {
+      "year": 2008,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.2,
+      "engine": 1461.0,
+      "max_power": 65.0,
+      "seats": 5
+    },
+    "Mahindra Scorpio": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 12.7,
+      "engine": 2179.0,
+      "max_power": 120.0,
+      "seats": 7
+    },
+    "Mahindra Ssangyong": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.18,
+      "engine": 2696.0,
+      "max_power": 184.0,
+      "seats": 7
+    },
+    "Mahindra Supro": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 23.5,
+      "engine": 909.0,
+      "max_power": 45.0,
+      "seats": 8
+    },
+    "Mahindra TUV": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 18.49,
+      "engine": 1493.0,
+      "max_power": 100.0,
+      "seats": 7
+    },
+    "Mahindra Thar": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 16.55,
+      "engine": 2498.0,
+      "max_power": 105.0,
+      "seats": 6
+    },
+    "Mahindra Verito": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.0,
+      "engine": 1461.0,
+      "max_power": 65.0,
+      "seats": 5
+    },
+    "Mahindra XUV300": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 18.5,
+      "engine": 1347.0,
+      "max_power": 112.5,
+      "seats": 5
+    },
+    "Mahindra XUV500": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 15.1,
+      "engine": 2179.0,
+      "max_power": 140.0,
+      "seats": 7
+    },
+    "Mahindra Xylo": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 14.0,
+      "engine": 2489.0,
+      "max_power": 112.0,
+      "seats": 8
+    },
+    "Maruti 800": {
+      "year": 2004,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 16.1,
+      "engine": 796.0,
+      "max_power": 37.0,
+      "seats": 4
+    },
+    "Maruti A-Star": {
+      "year": 2010,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 19.0,
+      "engine": 998.0,
+      "max_power": 66.1,
+      "seats": 5
+    },
+    "Maruti Alto": {
+      "year": 2013,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 22.05,
+      "engine": 796.0,
+      "max_power": 47.3,
+      "seats": 5
+    },
+    "Maruti Baleno": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 21.4,
+      "engine": 1197.0,
+      "max_power": 83.1,
+      "seats": 5
+    },
+    "Maruti Celerio": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 23.1,
+      "engine": 998.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Maruti Ciaz": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 28.09,
+      "engine": 1248.0,
+      "max_power": 88.5,
+      "seats": 5
+    },
+    "Maruti Dzire": {
+      "year": 2020,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 23.26,
+      "engine": 1197.0,
+      "max_power": 88.5,
+      "seats": 5
+    },
+    "Maruti Eeco": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 15.37,
+      "engine": 1196.0,
+      "max_power": 73.0,
+      "seats": 5
+    },
+    "Maruti Ertiga": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.77,
+      "engine": 1248.0,
+      "max_power": 88.8,
+      "seats": 7
+    },
+    "Maruti Esteem": {
+      "year": 2003,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 15.9,
+      "engine": 1298.0,
+      "max_power": 85.0,
+      "seats": 5
+    },
+    "Maruti Gypsy": {
+      "year": 2010,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 11.96,
+      "engine": 1298.0,
+      "max_power": 80.0,
+      "seats": 8
+    },
+    "Maruti Ignis": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.89,
+      "engine": 1197.0,
+      "max_power": 81.8,
+      "seats": 5
+    },
+    "Maruti Omni": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 16.8,
+      "engine": 796.0,
+      "max_power": 34.2,
+      "seats": 8
+    },
+    "Maruti Ritz": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.1,
+      "engine": 1248.0,
+      "max_power": 73.9,
+      "seats": 5
+    },
+    "Maruti S-Cross": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 25.1,
+      "engine": 1248.0,
+      "max_power": 88.5,
+      "seats": 5
+    },
+    "Maruti S-Presso": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 21.7,
+      "engine": 998.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Maruti SX4": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.5,
+      "engine": 1248.0,
+      "max_power": 88.8,
+      "seats": 5
+    },
+    "Maruti Swift": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 22.9,
+      "engine": 1248.0,
+      "max_power": 74.0,
+      "seats": 5
+    },
+    "Maruti Vitara": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 24.3,
+      "engine": 1248.0,
+      "max_power": 88.5,
+      "seats": 5
+    },
+    "Maruti Wagon": {
+      "year": 2012,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.51,
+      "engine": 998.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Maruti XL6": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 19.01,
+      "engine": 1462.0,
+      "max_power": 103.2,
+      "seats": 6
+    },
+    "Maruti Zen": {
+      "year": 2007,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 18.2,
+      "engine": 998.0,
+      "max_power": 64.0,
+      "seats": 5
+    },
+    "Mercedes-Benz B": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.25,
+      "engine": 2143.0,
+      "max_power": 127.4,
+      "seats": 5
+    },
+    "Mercedes-Benz CLA": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 15.04,
+      "engine": 1991.0,
+      "max_power": 183.0,
+      "seats": 5
+    },
+    "Mercedes-Benz E-Class": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 12.0,
+      "engine": 2146.0,
+      "max_power": 203.5,
+      "seats": 5
+    },
+    "Mercedes-Benz GL-Class": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 14.95,
+      "engine": 2565.0,
+      "max_power": 197.0,
+      "seats": 6
+    },
+    "Mercedes-Benz GLA": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 17.9,
+      "engine": 2143.0,
+      "max_power": 136.0,
+      "seats": 5
+    },
+    "Mercedes-Benz GLC": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 0.0,
+      "engine": 1950.0,
+      "max_power": 194.0,
+      "seats": 5
+    },
+    "Mercedes-Benz M-Class": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.74,
+      "engine": 2987.0,
+      "max_power": 229.0,
+      "seats": 5
+    },
+    "Mercedes-Benz New": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 14.84,
+      "engine": 2143.0,
+      "max_power": 170.0,
+      "seats": 5
+    },
+    "Mercedes-Benz S-Class": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.5,
+      "engine": 2987.0,
+      "max_power": 268.4,
+      "seats": 5
+    },
+    "Mitsubishi Lancer": {
+      "year": 2000,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 14.8,
+      "engine": 1998.0,
+      "max_power": 68.0,
+      "seats": 5
+    },
+    "Mitsubishi Pajero": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.5,
+      "engine": 2477.0,
+      "max_power": 175.6,
+      "seats": 7
+    },
+    "Nissan Kicks": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 14.23,
+      "engine": 1498.0,
+      "max_power": 104.5,
+      "seats": 5
+    },
+    "Nissan Micra": {
+      "year": 2013,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 19.49,
+      "engine": 1198.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Nissan Sunny": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.64,
+      "engine": 1461.0,
+      "max_power": 84.8,
+      "seats": 5
+    },
+    "Nissan Teana": {
+      "year": 2014,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 11.07,
+      "engine": 2496.0,
+      "max_power": 179.5,
+      "seats": 5
+    },
+    "Nissan Terrano": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.16,
+      "engine": 1461.0,
+      "max_power": 83.8,
+      "seats": 5
+    },
+    "Opel Astra": {
+      "year": 1998,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 13.1,
+      "engine": 1598.0,
+      "max_power": 77.0,
+      "seats": 5
+    },
+    "Renault Captur": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.37,
+      "engine": 1461.0,
+      "max_power": 108.5,
+      "seats": 5
+    },
+    "Renault Duster": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.64,
+      "engine": 1461.0,
+      "max_power": 108.5,
+      "seats": 5
+    },
+    "Renault Fluence": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.8,
+      "engine": 1461.0,
+      "max_power": 78.0,
+      "seats": 5
+    },
+    "Renault KWID": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 25.17,
+      "engine": 799.0,
+      "max_power": 53.3,
+      "seats": 5
+    },
+    "Renault Koleos": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 13.73,
+      "engine": 1995.0,
+      "max_power": 148.0,
+      "seats": 5
+    },
+    "Renault Lodgy": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.04,
+      "engine": 1461.0,
+      "max_power": 83.8,
+      "seats": 8
+    },
+    "Renault Pulse": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 23.08,
+      "engine": 1461.0,
+      "max_power": 63.1,
+      "seats": 5
+    },
+    "Renault Scala": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.64,
+      "engine": 1461.0,
+      "max_power": 84.8,
+      "seats": 5
+    },
+    "Renault Triber": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.0,
+      "engine": 999.0,
+      "max_power": 72.0,
+      "seats": 7
+    },
+    "Skoda Fabia": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.86,
+      "engine": 1199.0,
+      "max_power": 75.0,
+      "seats": 5
+    },
+    "Skoda Kodiaq": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 16.25,
+      "engine": 1968.0,
+      "max_power": 148.0,
+      "seats": 7
+    },
+    "Skoda Laura": {
+      "year": 2010,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.5,
+      "engine": 1896.0,
+      "max_power": 106.0,
+      "seats": 5
+    },
+    "Skoda Octavia": {
+      "year": 2007,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 18.7,
+      "engine": 1896.0,
+      "max_power": 90.0,
+      "seats": 5
+    },
+    "Skoda Rapid": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.81,
+      "engine": 1548.0,
+      "max_power": 103.5,
+      "seats": 5
+    },
+    "Skoda Superb": {
+      "year": 2013,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 14.67,
+      "engine": 1798.0,
+      "max_power": 157.8,
+      "seats": 5
+    },
+    "Skoda Yeti": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.67,
+      "engine": 1968.0,
+      "max_power": 138.1,
+      "seats": 5
+    },
+    "Tata Aria": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.7,
+      "engine": 2179.0,
+      "max_power": 138.1,
+      "seats": 7
+    },
+    "Tata Bolt": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 22.95,
+      "engine": 1248.0,
+      "max_power": 74.0,
+      "seats": 5
+    },
+    "Tata Harrier": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.0,
+      "engine": 1956.0,
+      "max_power": 152.9,
+      "seats": 5
+    },
+    "Tata Hexa": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.6,
+      "engine": 2179.0,
+      "max_power": 153.9,
+      "seats": 7
+    },
+    "Tata Indica": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 17.88,
+      "engine": 1396.0,
+      "max_power": 70.0,
+      "seats": 5
+    },
+    "Tata Indigo": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.09,
+      "engine": 1396.0,
+      "max_power": 69.0,
+      "seats": 5
+    },
+    "Tata Manza": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.0,
+      "engine": 1248.0,
+      "max_power": 89.4,
+      "seats": 5
+    },
+    "Tata Nano": {
+      "year": 2012,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 25.4,
+      "engine": 624.0,
+      "max_power": 37.5,
+      "seats": 4
+    },
+    "Tata New": {
+      "year": 2010,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.93,
+      "engine": 2179.0,
+      "max_power": 138.1,
+      "seats": 7
+    },
+    "Tata Nexon": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 19.25,
+      "engine": 1348.0,
+      "max_power": 108.5,
+      "seats": 5
+    },
+    "Tata Safari": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 14.0,
+      "engine": 2179.0,
+      "max_power": 138.1,
+      "seats": 7
+    },
+    "Tata Spacio": {
+      "year": 2007,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 14.6,
+      "engine": 2956.0,
+      "max_power": 63.0,
+      "seats": 10
+    },
+    "Tata Sumo": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 14.07,
+      "engine": 2956.0,
+      "max_power": 83.8,
+      "seats": 7
+    },
+    "Tata Tiago": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 23.84,
+      "engine": 1199.0,
+      "max_power": 84.0,
+      "seats": 5
+    },
+    "Tata Tigor": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 20.3,
+      "engine": 1199.0,
+      "max_power": 84.0,
+      "seats": 5
+    },
+    "Tata Venture": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 15.42,
+      "engine": 1405.0,
+      "max_power": 70.0,
+      "seats": 7
+    },
+    "Tata Winger": {
+      "year": 2010,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 10.71,
+      "engine": 1948.0,
+      "max_power": 90.0,
+      "seats": 14
+    },
+    "Tata Xenon": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.49,
+      "engine": 2179.0,
+      "max_power": 138.0,
+      "seats": 5
+    },
+    "Tata Zest": {
+      "year": 2016,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.65,
+      "engine": 1248.0,
+      "max_power": 88.7,
+      "seats": 5
+    },
+    "Toyota Camry": {
+      "year": 2012,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 16.28,
+      "engine": 2428.0,
+      "max_power": 161.2,
+      "seats": 5
+    },
+    "Toyota Corolla": {
+      "year": 2010,
+      "fuel": "Petrol",
+      "transmission": "Manual",
+      "mileage": 14.53,
+      "engine": 1794.0,
+      "max_power": 125.0,
+      "seats": 5
+    },
+    "Toyota Etios": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 23.59,
+      "engine": 1364.0,
+      "max_power": 67.1,
+      "seats": 5
+    },
+    "Toyota Fortuner": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 12.55,
+      "engine": 2982.0,
+      "max_power": 171.0,
+      "seats": 7
+    },
+    "Toyota Glanza": {
+      "year": 2019,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 19.56,
+      "engine": 1197.0,
+      "max_power": 81.8,
+      "seats": 5
+    },
+    "Toyota Innova": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 12.89,
+      "engine": 2494.0,
+      "max_power": 102.0,
+      "seats": 7
+    },
+    "Toyota Land": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.0,
+      "engine": 2982.0,
+      "max_power": 170.3,
+      "seats": 7
+    },
+    "Toyota Platinum": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 23.59,
+      "engine": 1364.0,
+      "max_power": 67.0,
+      "seats": 5
+    },
+    "Toyota Qualis": {
+      "year": 2002,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 13.1,
+      "engine": 2446.0,
+      "max_power": 75.0,
+      "seats": 10
+    },
+    "Toyota Yaris": {
+      "year": 2018,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 17.45,
+      "engine": 1496.0,
+      "max_power": 105.5,
+      "seats": 5
+    },
+    "Volkswagen Ameo": {
+      "year": 2017,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 21.66,
+      "engine": 1498.0,
+      "max_power": 108.5,
+      "seats": 5
+    },
+    "Volkswagen CrossPolo": {
+      "year": 2013,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.14,
+      "engine": 1498.0,
+      "max_power": 88.5,
+      "seats": 5
+    },
+    "Volkswagen GTI": {
+      "year": 2016,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 16.34,
+      "engine": 1798.0,
+      "max_power": 189.3,
+      "seats": 5
+    },
+    "Volkswagen Jetta": {
+      "year": 2011,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 16.96,
+      "engine": 1968.0,
+      "max_power": 138.0,
+      "seats": 5
+    },
+    "Volkswagen Passat": {
+      "year": 2010,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 14.3,
+      "engine": 1968.0,
+      "max_power": 160.0,
+      "seats": 5
+    },
+    "Volkswagen Polo": {
+      "year": 2014,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.14,
+      "engine": 1199.0,
+      "max_power": 74.0,
+      "seats": 5
+    },
+    "Volkswagen Vento": {
+      "year": 2012,
+      "fuel": "Diesel",
+      "transmission": "Manual",
+      "mileage": 20.54,
+      "engine": 1598.0,
+      "max_power": 103.6,
+      "seats": 5
+    },
+    "Volvo S60": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 9.0,
+      "engine": 1984.0,
+      "max_power": 181.0,
+      "seats": 5
+    },
+    "Volvo S90": {
+      "year": 2019,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 18.0,
+      "engine": 1969.0,
+      "max_power": 190.0,
+      "seats": 5
+    },
+    "Volvo V40": {
+      "year": 2015,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 20.05,
+      "engine": 1984.0,
+      "max_power": 150.0,
+      "seats": 5
+    },
+    "Volvo XC40": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 18.0,
+      "engine": 1969.0,
+      "max_power": 190.0,
+      "seats": 5
+    },
+    "Volvo XC60": {
+      "year": 2018,
+      "fuel": "Diesel",
+      "transmission": "Automatic",
+      "mileage": 11.2,
+      "engine": 1969.0,
+      "max_power": 235.0,
+      "seats": 5
+    },
+    "Volvo XC90": {
+      "year": 2017,
+      "fuel": "Petrol",
+      "transmission": "Automatic",
+      "mileage": 42.0,
+      "engine": 1969.0,
+      "max_power": 400.0,
+      "seats": 4
+    }
+  }
+}

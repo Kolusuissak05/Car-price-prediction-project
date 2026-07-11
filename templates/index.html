@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Car Price Predictor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #14181c;
+    --surface: #1b2126;
+    --surface-2: #232b32;
+    --line: #303a42;
+    --text: #e9e7e2;
+    --muted: #8b939b;
+    --amber: #f2a71b;
+    --teal: #3ddc97;
+    --red: #e2564f;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(242,167,27,0.08), transparent),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+  }
+  .topbar{
+    display:flex; align-items:center; gap:14px;
+    padding:22px 32px; border-bottom:1px solid var(--line);
+  }
+  .topbar .dot{ width:10px; height:10px; border-radius:50%; background:var(--amber); box-shadow:0 0 10px var(--amber); }
+  .topbar h1{
+    font-family:'Space Grotesk',sans-serif; font-size:19px; font-weight:700; margin:0; letter-spacing:0.2px;
+  }
+  .topbar .stats{
+    margin-left:auto; display:flex; gap:22px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted);
+  }
+  .topbar .stats b{ color:var(--text); }
+
+  .layout{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:28px;
+    max-width:1180px;
+    margin:0 auto;
+    padding:36px 32px 64px;
+  }
+  @media (max-width: 920px){ .layout{ grid-template-columns:1fr; } }
+
+  .panel{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:26px;
+  }
+  .panel h2{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:14px; letter-spacing:1.2px; text-transform:uppercase;
+    color:var(--muted); margin:0 0 20px;
+  }
+
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .field{ margin-bottom:16px; }
+  .field label{
+    display:block; font-size:12px; color:var(--muted); margin-bottom:6px; letter-spacing:0.3px;
+  }
+  .auto-badge{
+    display:inline-block; font-size:9px; font-weight:600; letter-spacing:0.6px; text-transform:uppercase;
+    color:var(--teal); background:rgba(61,220,151,0.12); border:1px solid rgba(61,220,151,0.3);
+    padding:1px 6px; border-radius:20px; margin-left:6px; position:relative; top:-1px;
+  }
+  .field select, .field input{
+    width:100%; background:var(--surface-2); border:1px solid var(--line); color:var(--text);
+    padding:11px 12px; border-radius:8px; font-family:'Inter',sans-serif; font-size:14px;
+    outline:none; transition:border-color .15s;
+    -webkit-appearance:none; appearance:none;
+  }
+  .field select{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238b939b'/%3E%3C/svg%3E");
+    background-repeat:no-repeat; background-position:right 14px center; padding-right:32px;
+  }
+  .field select:focus, .field input:focus{ border-color:var(--amber); }
+  .field .hint{ font-size:11px; color:var(--muted); margin-top:5px; }
+
+  .predict-btn{
+    width:100%; margin-top:6px;
+    background:var(--amber); color:#1a1305; border:none; border-radius:9px;
+    padding:15px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px;
+    cursor:pointer; transition:filter .15s, transform .1s;
+    letter-spacing:0.3px;
+  }
+  .predict-btn:hover{ filter:brightness(1.08); }
+  .predict-btn:active{ transform:scale(0.99); }
+  .predict-btn:disabled{ opacity:0.6; cursor:wait; }
+
+  /* Dashboard / gauge cluster */
+  .cluster{ position:sticky; top:28px; display:flex; flex-direction:column; align-items:center; text-align:center; }
+  .gauge-wrap{ position:relative; width:250px; height:250px; margin:6px 0 4px; }
+  .gauge-wrap svg{ width:100%; height:100%; transform:rotate(-90deg); }
+  .gauge-track{ fill:none; stroke:var(--surface-2); stroke-width:14; }
+  .gauge-fill{ fill:none; stroke:var(--amber); stroke-width:14; stroke-linecap:round;
+    stroke-dasharray:534; stroke-dashoffset:534; transition:stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1), stroke 0.4s; }
+  .gauge-center{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  }
+  .gauge-label{ font-size:11px; color:var(--muted); letter-spacing:1.2px; text-transform:uppercase; margin-bottom:6px; }
+  .gauge-value{
+    font-family:'IBM Plex Mono',monospace; font-size:30px; font-weight:600; color:var(--text);
+    letter-spacing:0.5px; min-height:38px;
+  }
+  .gauge-currency{ font-size:15px; color:var(--muted); margin-top:2px; }
+
+  .odometer{
+    display:flex; gap:3px; margin-top:18px; padding:14px 18px; background:var(--surface-2);
+    border-radius:8px; border:1px solid var(--line); font-family:'IBM Plex Mono',monospace;
+  }
+  .odometer span{
+    font-size:13px; color:var(--muted);
+  }
+
+  .summary-list{ width:100%; margin-top:22px; text-align:left; }
+  .summary-list .row{
+    display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px dashed var(--line);
+    font-size:13px;
+  }
+  .summary-list .row span:first-child{ color:var(--muted); }
+  .summary-list .row span:last-child{ font-family:'IBM Plex Mono',monospace; }
+
+  .empty-state{ color:var(--muted); font-size:13px; margin-top:18px; line-height:1.5; }
+  .error-box{
+    margin-top:16px; background:rgba(226,86,79,0.1); border:1px solid rgba(226,86,79,0.4);
+    color:var(--red); padding:10px 14px; border-radius:8px; font-size:13px; display:none;
+  }
+
+  footer{ text-align:center; color:var(--muted); font-size:12px; padding:20px; border-top:1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="dot"></div>
+  <h1>Car Price Predictor</h1>
+  <div class="stats">
+    <div>Model <b>Linear Regression</b></div>
+    <div>R² <b id="stat-r2">—</b></div>
+    <div>Avg. error <b id="stat-mae">—</b></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <div class="panel">
+    <h2>Vehicle details</h2>
+    <form id="predict-form">
+      <div class="grid2">
+        <div class="field">
+          <label for="brand">Brand</label>
+          <select id="brand" required></select>
+        </div>
+        <div class="field">
+          <label for="model">Model</label>
+          <select id="model" required></select>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="year">Year <span class="auto-badge">auto</span></label>
+          <input type="number" id="year" value="2018" required>
+        </div>
+        <div class="field">
+          <label for="km_driven">Kilometers driven</label>
+          <input type="number" id="km_driven" min="0" value="45000" required>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="fuel">Fuel type <span class="auto-badge">auto</span></label>
+          <select id="fuel" required></select>
+        </div>
+        <div class="field">
+          <label for="transmission">Transmission <span class="auto-badge">auto</span></label>
+          <select id="transmission" required></select>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="seller_type">Seller type</label>
+          <select id="seller_type" required></select>
+        </div>
+        <div class="field">
+          <label for="owner">Ownership</label>
+          <select id="owner" required></select>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="mileage">Mileage (kmpl) <span class="auto-badge">auto</span></label>
+          <input type="number" id="mileage" step="0.1" min="0" value="18.5" required>
+        </div>
+        <div class="field">
+          <label for="engine">Engine (CC) <span class="auto-badge">auto</span></label>
+          <input type="number" id="engine" min="0" value="1200" required>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field">
+          <label for="max_power">Max power (bhp) <span class="auto-badge">auto</span></label>
+          <input type="number" id="max_power" step="0.1" min="0" value="85" required>
+        </div>
+        <div class="field">
+          <label for="seats">Seats <span class="auto-badge">auto</span></label>
+          <input type="number" id="seats" min="2" max="14" value="5" required>
+        </div>
+      </div>
+
+      <button type="submit" class="predict-btn" id="submit-btn">Predict selling price</button>
+      <div class="error-box" id="error-box"></div>
+    </form>
+  </div>
+
+  <div class="panel cluster">
+    <h2 style="align-self:flex-start;">Predicted price</h2>
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 200 200">
+        <circle class="gauge-track" cx="100" cy="100" r="85"></circle>
+        <circle class="gauge-fill" id="gauge-fill" cx="100" cy="100" r="85"></circle>
+      </svg>
+      <div class="gauge-center">
+        <div class="gauge-label">Estimated value</div>
+        <div class="gauge-value" id="gauge-value">—</div>
+        <div class="gauge-currency" id="gauge-currency"></div>
+      </div>
+    </div>
+
+    <div id="empty-state" class="empty-state">
+      Fill in the vehicle details and hit <b>Predict selling price</b> to see the estimate here.
+    </div>
+
+    <div class="summary-list" id="summary-list" style="display:none;"></div>
+  </div>
+
+</div>
+
+<footer id="footer-text">Trained on the Cardetails dataset · Linear Regression · FastAPI</footer>
+
+<script>
+function fillSelect(id, options) {
+  const el = document.getElementById(id);
+  el.innerHTML = options.map(o => `<option value="${o}">${o}</option>`).join('');
+}
+
+let METADATA = null;
+
+async function loadMetadata() {
+  const res = await fetch('/api/metadata');
+  METADATA = await res.json();
+
+  fillSelect('brand', METADATA.brands);
+  fillSelect('fuel', METADATA.fuels);
+  fillSelect('transmission', METADATA.transmissions);
+  fillSelect('seller_type', METADATA.sellers);
+  fillSelect('owner', METADATA.owners);
+
+  const yearInput = document.getElementById('year');
+  yearInput.min = METADATA.year_min;
+  yearInput.max = METADATA.year_max + 2;
+
+  document.getElementById('stat-r2').textContent = METADATA.r2_score;
+  document.getElementById('stat-mae').textContent = '₹' + Math.round(METADATA.mae).toLocaleString('en-IN');
+  document.getElementById('footer-text').textContent =
+    `Trained on ${METADATA.brands.length} brands from the Cardetails dataset · Linear Regression · FastAPI`;
+
+  populateModelsForBrand(document.getElementById('brand').value);
+}
+
+function populateModelsForBrand(brand) {
+  const models = METADATA.models_by_brand[brand] || [];
+  fillSelect('model', models);
+  applyModelDefaults(document.getElementById('model').value);
+}
+
+// Fills in every field EXCEPT km_driven, seller_type, and owner —
+// those stay fully user-controlled since they're not tied to the model itself.
+function applyModelDefaults(modelName) {
+  const defaults = METADATA.model_defaults[modelName];
+  if (!defaults) return;
+
+  document.getElementById('year').value = defaults.year;
+  document.getElementById('fuel').value = defaults.fuel;
+  document.getElementById('transmission').value = defaults.transmission;
+  document.getElementById('mileage').value = defaults.mileage;
+  document.getElementById('engine').value = defaults.engine;
+  document.getElementById('max_power').value = defaults.max_power;
+  document.getElementById('seats').value = defaults.seats;
+}
+
+document.getElementById('brand').addEventListener('change', (e) => {
+  populateModelsForBrand(e.target.value);
+});
+
+document.getElementById('model').addEventListener('change', (e) => {
+  applyModelDefaults(e.target.value);
+});
+
+loadMetadata();
+
+const form = document.getElementById('predict-form');
+const submitBtn = document.getElementById('submit-btn');
+const errorBox = document.getElementById('error-box');
+const gaugeFill = document.getElementById('gauge-fill');
+const gaugeValue = document.getElementById('gauge-value');
+const gaugeCurrency = document.getElementById('gauge-currency');
+const emptyState = document.getElementById('empty-state');
+const summaryList = document.getElementById('summary-list');
+
+const CIRC = 534; // 2 * PI * 85
+// rough scale for the gauge sweep, in rupees
+const GAUGE_MAX = 3000000;
+
+function animateGauge(value) {
+  const pct = Math.min(value / GAUGE_MAX, 1);
+  const offset = CIRC - pct * CIRC * 0.75; // 270 degree sweep
+  gaugeFill.style.strokeDashoffset = CIRC - pct * CIRC;
+  let color = '#f2a71b';
+  if (pct > 0.66) color = '#3ddc97';
+  if (pct < 0.15) color = '#e2564f';
+  gaugeFill.style.stroke = color;
+}
+
+function animateNumber(el, target) {
+  const duration = 700;
+  const start = performance.now();
+  function tick(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const current = Math.round(target * eased);
+    el.textContent = current.toLocaleString('en-IN');
+    if (t < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  errorBox.style.display = 'none';
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Calculating…';
+
+  const payload = {
+    brand: document.getElementById('brand').value,
+    year: parseInt(document.getElementById('year').value),
+    km_driven: parseFloat(document.getElementById('km_driven').value),
+    fuel: document.getElementById('fuel').value,
+    seller_type: document.getElementById('seller_type').value,
+    transmission: document.getElementById('transmission').value,
+    owner: document.getElementById('owner').value,
+    mileage: parseFloat(document.getElementById('mileage').value),
+    engine: parseFloat(document.getElementById('engine').value),
+    max_power: parseFloat(document.getElementById('max_power').value),
+    seats: parseInt(document.getElementById('seats').value),
+  };
+
+  try {
+    const res = await fetch('/predict', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+
+    if (data.error) {
+      errorBox.textContent = data.error;
+      errorBox.style.display = 'block';
+    } else {
+      emptyState.style.display = 'none';
+      summaryList.style.display = 'block';
+      gaugeCurrency.textContent = 'INR';
+      animateGauge(data.predicted_price);
+      animateNumber(gaugeValue, Math.round(data.predicted_price));
+
+      summaryList.innerHTML = `
+        <div class="row"><span>Brand</span><span>${payload.brand}</span></div>
+        <div class="row"><span>Year</span><span>${payload.year}</span></div>
+        <div class="row"><span>Kilometers driven</span><span>${payload.km_driven.toLocaleString('en-IN')} km</span></div>
+        <div class="row"><span>Fuel / Transmission</span><span>${payload.fuel} / ${payload.transmission}</span></div>
+        <div class="row"><span>Predicted price</span><span>${data.predicted_price_formatted}</span></div>
+      `;
+    }
+  } catch (err) {
+    errorBox.textContent = 'Something went wrong reaching the server. Is the FastAPI app running?';
+    errorBox.style.display = 'block';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Predict selling price';
+  }
+});
+</script>
+
+</body>
+</html>
